@@ -1,0 +1,227 @@
+body {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+li {
+    margin-right: 40px;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+}
+.nav {
+    color: #828282;
+}
+nav {
+    margin-bottom: 27.5px;
+}
+ hr {
+    width: 970px;
+    height: 1px;
+    background: #828282;
+    margin: auto;
+    margin-bottom: 12px;
+    
+ }
+ h1 {
+    margin-left: 235px;
+    font-size: 48px;
+    font-weight: 700;
+ }
+ .about img {
+   
+    margin: 50px auto 0 ;
+    width: 970px;
+    height: 387px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .about div {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: var(--bg-gray, #F6F6F6);
+ }
+ .about h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    padding-bottom: 50px;
+ }
+.about p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.about p:last-child {
+    margin-bottom: 0; 
+}
+.skills h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.skills h3 {
+    text-align: center;
+    font-size: 18px; 
+}
+div img.icon {
+    margin-bottom: 25px;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div img.icon_2 {
+    width: 53px;
+    height: 80px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skills img {
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+}
+.last_star {
+    margin-right: 0;
+}
+.skills p {
+    color: var(--text, #828282);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.28px;
+    margin-bottom: 60px;
+}
+.skills div {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.skills div div {
+    display: inline;
+    margin-right: 97px;
+}
+.skills div div:last-child {
+    margin-right: 0;
+}
+.portfolio div {
+    background: var(--bg-gray, #F6F6F6);
+}
+.portfolio h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.portfolio img {
+    width: 970px;
+    height: 540px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+.portfolio p {
+    text-align: center;
+    font-size: 18px;
+    text-decoration-line: underline;
+    padding-bottom: 70px;
+}
+.reebok {
+    background: var(--bg-gray, #F6F6F6);
+}
+.reebok img {
+    width: 970px;
+    height: 540px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+.reebok p {
+    text-align: center;
+    font-size: 18px;
+    text-decoration-line: underline;
+    padding-bottom: 70px;
+}
+.braun {
+    background: var(--bg-gray, #F6F6F6);
+}
+.braun img {
+    width: 970px;
+    height: 540px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+.braun p {
+    text-align: center;
+    font-size: 18px;
+    text-decoration-line: underline;
+    padding-bottom: 100px;
+}
+footer h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+footer h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+button {
+    border-radius: 22px;
+    background: var(--Black, #070707);
+    width: 180px;
+    height: 44px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.button {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+footer div {
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    margin-right: 50px;
+    width: 40px;
+    height: 40px;
+}
+footer a:last-child {
+    margin-right: 0;
+}
+footer h4 {
+    color: #828282;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
