@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 793px;
+    margin: 0 auto;
+}
+header {
+    margin-top: 10px;
+}
+header div.container {
+    background: #4A4F56;
+}
+h1 {
+    color: #FF8984;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 4px;
+}
+h2 {
+    color: #FF8984;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 12px;
+}
+section.container {
+    background: #3B3F45;
+}
+div.form {
+    width: 534px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 45px;
+}
+h3 , p {
+    display: inline-block;
+}
+input {
+    appearance: auto;
+    width: 19px;
+    height: 19px;
+    margin: 12px 16px 14px 14px;
+}
+label {
+    display: block;
+    background: #88839E;
+}
+label:nth-child(2n) {
+    background: #7A7593;
+}
+label:hover {
+    background: #625E77;
+    border-bottom: 3px solid  #FFF;
+    border-top: 3px solid #FFF;
+    transition: all .1s ease-in;
+}
+label:active {
+    background: #dc6891;
+}
+input:checked~p {
+    color: #9B96AC;
+    text-decoration: line-through;
+}
+input:checked~h3 {
+    color: #9B96AC;
+    text-decoration: line-through;
+}
+h3 {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 11px;
+    margin-bottom: 13px;
+    margin-right: 3px;
+}
+p {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 17px;
+}
+p::before {
+    content: "(";
+}
+p::after {
+    content: ")";
+}
+button {
+    width: 534px;
+    height: 45px;
+    background: #4A4F56;
+    margin: auto;
+    display: block;
+}
+footer section.container {
+    padding-bottom: 45px;
+}
+button p {
+    color: #FF8984;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+}
+button p::after {
+   content: ":)";
+}
+button p::before {
+    content: initial;
+ }
