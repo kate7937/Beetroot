@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Farro";
+    src: url("fonts/Farro/Farro-Light.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Francois One";
+    src: url("fonts/Francois_One/FrancoisOne-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "PT Sans";
+    src: url("fonts/PT_Sans/PTSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "PT Sans";
+    src: url("fonts/PT_Sans/PTSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "PT Sans";
+    src: url("fonts/PT_Sans/PTSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Staatliches";
+    src: url("fonts/Staatliches/Staatliches-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Tourney";
+    src: url("fonts/Tourney/static/Tourney-SemiBold.ttf") format("truetype");
+  }
+* {
+    box-sizing: border-box;
+}    
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header.container {
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+header nav {
+    display: flex;
+    gap: 10px;
+}
+header img {
+    width: 238px;
+    height: 54px;
+}
+div.nav {
+    display: flex;
+}
+div.nav nav a {
+    font-family: Staatliches;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.66px;
+}
+a.eng {
+    margin-right: 50px;
+    font-family: Tourney;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 1.32px;
+}
+h2 {
+    display: inline;
+    font-family: "Francois One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; 
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+}
+span.after {
+    font-feature-settings: 'sups' on;
+    font-family: Farro;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    margin-bottom: auto;
+}
+section.container {
+    margin-top: 70px;
+}
+section.container:last-of-type {
+    margin-bottom: 90px;
+}
+.title {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+.container p {
+    font-family: "PT Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+}
+.line {
+    text-decoration: underline;
+}
+.italic {
+    font-family: "PT Sans";
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 48px;
+}
+.bold {
+    font-family: "PT Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+}
+.gray {
+    background-color: rgb(203, 203, 203);
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
