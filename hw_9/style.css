@@ -1,0 +1,233 @@
+ @font-face {
+    font-family: "Delius Unicase";
+    src: url("fonts/Delius_Unicase/DeliusUnicase-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+  }
+* {
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 120px;
+}
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.container:first-of-type {
+    margin-top: 30px;
+}
+.container:last-of-type {
+    margin-bottom: 30px;
+}
+section.container h2 {
+    text-align: center;
+    font-family: "Delius Unicase";
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    margin-bottom: 80px;
+}
+div.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 370px);
+    gap: 30px;
+    grid-template-areas: "item_1 item_2 item_2"
+                         "item_3 item_3 item_4"
+                         "item_5 item_6 item_6";
+}
+.item:nth-child(1) {
+    grid-area: item_1;
+}
+.item:nth-child(2) {
+    grid-area: item_2;
+}
+.item:nth-child(3) {
+    grid-area: item_3;
+}
+.item:nth-child(4) {
+    grid-area: item_4;
+}
+.item:nth-child(5) {
+    grid-area: item_5;
+}
+.item:nth-child(6) {
+    grid-area: item_6;
+}
+div.item {
+    background: var(--blure, linear-gradient(0deg, #241F24 0%, rgba(91, 91, 91, 0.45) 34.11%, rgba(187, 186, 192, 0.26) 62.5%));
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+div.item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+div.content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px 20px 20px;
+}
+.autor {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+}
+.date {
+    color: #E0E0E0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+}
+.second_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 370px);
+    gap: 30px;
+    grid-template-areas: "card_1 card_2 card_2"
+                         "card_3 card_3 card_4"
+                         "card_3 card_3 card_4"
+                         "card_5 card_5 card_6";
+}
+.card:nth-child(1) {
+    grid-area: card_1;
+}
+.card:nth-child(2) {
+    grid-area: card_2;
+}
+.card:nth-child(3) {
+    grid-area: card_3;
+}
+.card:nth-child(4) {
+    grid-area: card_4;
+}
+.card:nth-child(5) {
+    grid-area: card_5;
+}
+.card:nth-child(6) {
+    grid-area: card_6;
+}
+div.card {
+    background: var(--blure, linear-gradient(0deg, #241F24 0%, rgba(91, 91, 91, 0.45) 34.11%, rgba(187, 186, 192, 0.26) 62.5%));
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+div.card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.third_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(5, 370px) ;
+    gap: 30px;
+    grid-template-areas: "cell_1 cell_2 cell_3"
+                         "cell_4 cell_2 cell_5"
+                         "cell_6 cell_7 cell_5"
+                         "cell_6 cell_8 cell_8"
+                         "cell_9 cell_9 cell_10";
+}
+.cell:nth-child(1) {
+    grid-area: cell_1;
+}
+.cell:nth-child(2) {
+    grid-area: cell_2;
+}
+.cell:nth-child(3) {
+    grid-area: cell_3;
+}
+.cell:nth-child(4) {
+    grid-area: cell_4;
+}
+.cell:nth-child(5) {
+    grid-area: cell_5;
+}
+.cell:nth-child(6) {
+    grid-area: cell_6;
+}
+.cell:nth-child(7) {
+    grid-area: cell_7;
+}
+.cell:nth-child(8) {
+    grid-area: cell_8;
+}
+.cell:nth-child(9) {
+    grid-area: cell_9;
+}
+.cell:nth-child(10) {
+    grid-area: cell_10;
+}
+div.cell {
+    background: var(--blure, linear-gradient(0deg, #241F24 0%, rgba(91, 91, 91, 0.45) 34.11%, rgba(187, 186, 192, 0.26) 62.5%));
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+div.cell:hover {
+    background: none;
+}
+div.cell img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+div.cell div.hidden div.icons img {
+    width: 40px;
+    height: 40px;
+}
+div.cell div.hidden div.hand img {
+    width: 25px;
+    height: 25px;
+}
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+div.icons img.download {
+    top: 20px;
+    left: 300px;
+}
+div.icons img.like {
+    top: 20px;
+    left: 20px;
+}
+div.hidden div.hand img {
+    top: 60px;
+    left: 20px;
+}
+.hidden {
+    opacity: 0;
+}
+.cell:hover>div.hidden {
+    opacity: 1;
+    transition: all .1s ease-in;
+}
