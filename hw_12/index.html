@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 12</title>
+    <link href="./reset.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="get" name="create">
+            <header>
+                <h2>Create an Account</h2>
+            </header>
+            <main>
+                <div class="name">
+                    <label>
+                        <h3>First Name</h3>
+                        <input type="text" name="first_text" required>
+                    </label>
+                    <label>
+                        <h3>Last Name</h3>
+                        <input type="text" name="second_text" required>
+                    </label>
+                </div>
+                <label class="email">
+                    <h3>Email</h3>
+                    <input type="email" name="email" required>
+                    <p>We'll never share your email with anyone else.</p>
+                </label>
+                <div class="sex">
+                    <label>
+                        <input type="radio" name="male" required>
+                        <h3>Male</h3>
+                    </label>
+                    <label>
+                        <input type="radio" name="female" required>
+                        <h3>Female</h3>
+                    </label>
+                </div>
+                <div class="place">
+                    <label>
+                      <h3>Country</h3>
+                      <div class="box">
+                        <select name="country" id="first_select">
+                            <option>Select</option>
+                            <option>Ukraine</option>
+                            <option>USA</option>
+                            <option>Germany</option>
+                            <option>Poland</option>
+                            <option>China</option>
+                        </select>
+                        <img src="img/arrow.svg">
+                      </div>
+                    </label>
+                    <label>
+                        <h3>City</h3>
+                        <input type="text" name="city">
+                    </label>
+                </div>
+                <button type="submit" class="first_button">Sign Up</button>
+                <div class="last_text">
+                    <p>By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </main>
+            <footer class="first_section">
+                <p>Have an account?</p>
+                <a href="#">Log In</a>
+            </footer>
+        </form>
+        <form action="#" method="get" name="profile">
+            <header class="second_section">
+                <h2>Profile</h2>
+            </header>
+            <main>
+              <div class="card">
+                <img src="img/photo.svg">
+                <div class="block">
+                  <div class="inputs">
+                    <div class="image">
+                      <label>
+                        <input type="text" required>
+                      </label>
+                      <img src="img/camera.svg">
+                    </div>
+                    <div class="trash">
+                      <button type="reset"></button>
+                      <img src="img/trash.svg">
+                    </div>
+                  </div>
+                    <p>Up to 1 MB (300x300 px)</p>
+                </div>
+              </div>
+              <div class="info">
+                <label>
+                    <h3>Name</h3>
+                    <input type="text" required>
+                </label>
+                <label>
+                    <h3>E-mail</h3>
+                    <input type="email" required>
+                </label>
+              </div>
+              <div class="place">
+                <label>
+                  <h3>Country</h3>
+                  <div class="box">
+                    <select name="country" id="first_select">
+                        <option>Select</option>
+                        <option>Ukraine</option>
+                        <option>USA</option>
+                        <option>Germany</option>
+                        <option>Poland</option>
+                        <option>China</option>
+                    </select>
+                    <img src="img/arrow.svg">
+                  </div>
+                </label>
+                <label>
+                    <h3>City</h3>
+                    <input type="text" name="city" required>
+                </label>
+            </div>
+            <div class="number">
+                <label>
+                    <h3>Zip Code</h3>
+                    <input type="number" required>
+                </label>
+                <label>
+                    <h3>Phone Number</h3>
+                    <input type="number" required>
+                </label>
+            </div>
+            </main>
+            <footer>
+                <button class="second_button" type="submit">Update</button>
+            </footer>
+        </form>
+    </div>
+</body>
+</html>
