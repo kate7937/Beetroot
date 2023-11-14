@@ -1,0 +1,11 @@
+@import "var" ;
+@font-face {
+    font-family: $base-font;
+    src: url("fonts/open_sans_regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: $base-font;
+    src: url("fonts/open_sans_bold.ttf") format("truetype");
+    font-weight: 700;
+  }
