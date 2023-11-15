@@ -1,0 +1,510 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/open_sans_regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/open_sans_bold.ttf") format("truetype");
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 970px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+header.container {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #828282;
+}
+header.container nav ul {
+  display: flex;
+  gap: 40px;
+}
+header.container nav ul li {
+  color: #828282;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.36px;
+}
+header.container nav ul li:hover {
+  color: #070707;
+}
+header.container .burger {
+  height: 80px;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-end;
+}
+header.container .burger span {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #070707;
+}
+
+.first_section {
+  margin-top: 12px;
+}
+.first_section h1 {
+  color: #070707;
+  font-family: "Open Sans";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.first_section img {
+  width: 100%;
+}
+
+.about {
+  background: #F6F6F6;
+  padding: 100px 0 100px 0;
+}
+.about .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.about .container h2 {
+  color: #070707;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.about .container p {
+  color: #070707;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.about .container p:nth-of-type(1) {
+  max-width: 480px;
+}
+.about .container p:nth-of-type(2) {
+  max-width: 406px;
+}
+.about .container p:nth-of-type(3) {
+  max-width: 321px;
+}
+
+.skills {
+  padding: 100px 10px 100px 10px;
+}
+.skills h2 {
+  color: #070707;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.skills h3 {
+  color: #070707;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.skills .icons {
+  display: flex;
+  gap: 97px;
+}
+.skills .icons .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills .icons .item p {
+  color: #828282;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
+.skills .icons .item .icon {
+  width: 80px;
+  height: 80px;
+}
+.skills .icons .item .icon_2 {
+  width: 53px;
+  height: 80px;
+}
+.skills .icons .item .stars {
+  display: flex;
+  gap: 10px;
+}
+.skills .icons .item .stars img {
+  width: 26px;
+  height: 26px;
+}
+
+.portfolio {
+  background: #F6F6F6;
+  padding: 100px 10px 100px 10px;
+}
+.portfolio h2 {
+  color: #070707;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.portfolio .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.portfolio .cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.portfolio .cards .card img {
+  width: 100%;
+}
+.portfolio .cards .card a {
+  color: #070707;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.footer {
+  padding: 100px 10px 100px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer h2 {
+  color: #070707;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.footer h3 {
+  color: #070707;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 60px;
+}
+.footer button {
+  width: 180px;
+  height: 44px;
+  border-radius: 22px;
+  background: #070707;
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  margin-bottom: 30px;
+}
+.footer button:hover {
+  background-color: bisque;
+  color: rgb(133, 91, 77);
+}
+.footer .social {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+.footer .social img {
+  width: 40px;
+  height: 40px;
+}
+.footer .social img:hover {
+  opacity: 0.5;
+}
+.footer h4 {
+  max-width: 200px;
+  color: #828282;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 970px) {
+  .skills .icons {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 230px 230px;
+    grid-template-areas: "item-1 item-2" "item-3 item-4";
+  }
+  .skills .icons .item:nth-of-type(1) {
+    grid-area: item-1;
+  }
+  .skills .icons .item:nth-of-type(2) {
+    grid-area: item-2;
+  }
+  .skills .icons .item:nth-of-type(3) {
+    grid-area: item-3;
+  }
+  .skills .icons .item:nth-of-type(4) {
+    grid-area: item-4;
+  }
+}
+@media (max-width: 650px) {
+  .first_section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .about {
+    padding: 50px 10px 50px 10px;
+  }
+  .about .container {
+    gap: 20px;
+  }
+  .about .container h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .about .container p {
+    font-size: 14px;
+  }
+  .about .container p:nth-of-type(1) {
+    max-width: 300px;
+  }
+  .about .container p:nth-of-type(2) {
+    max-width: 260px;
+  }
+  .about .container p:nth-of-type(3) {
+    max-width: 215px;
+  }
+  .skills {
+    padding: 50px 10px 50px 10px;
+  }
+  .skills h2 {
+    font-size: 30px;
+  }
+  .skills h3 {
+    font-size: 16px;
+  }
+  .portfolio {
+    padding: 50px 10px 50px 10px;
+  }
+  .portfolio h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  .portfolio cards card a {
+    font-size: 14px;
+  }
+  .footer {
+    padding: 50px 10px 50px 10px;
+  }
+  .footer h2 {
+    font-size: 30px;
+  }
+  .footer h3 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 520px) {
+  header.container nav ul {
+    display: none;
+  }
+  header.container .burger {
+    display: flex;
+  }
+  header.active {
+    height: 180px;
+  }
+  header.active nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 470px) {
+  .skills .icons {
+    grid-template-columns: 1fr;
+    grid-template-rows: 230px 230px 230px 230px;
+    grid-template-areas: "item-1" "item-2" "item-3" "item-4";
+  }
+  .portfolio .cards {
+    gap: 35px;
+  }
+  .portfolio .cards .card {
+    gap: 20px;
+  }
+  .portfolio .cards .card a {
+    font-size: 13px;
+  }
+}
+@media (max-width: 360px) {
+  .footer .social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 40px;
+    grid-template-areas: "img-1 img-2" "img-3 img-4";
+  }
+  .footer .social img:nth-of-type(1) {
+    grid-area: img-1;
+  }
+  .footer .social img:nth-of-type(2) {
+    grid-area: img-2;
+  }
+  .footer .social img:nth-of-type(3) {
+    grid-area: img-3;
+  }
+  .footer .social img:nth-of-type(4) {
+    grid-area: img-4;
+  }
+}
