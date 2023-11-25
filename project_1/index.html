@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="first_section">
+          <div class="container">
+            <h1>Bhromaon</h1>
+            <h2>Safe Travel Anywhere</h2>
+            <form method="get">
+                <input type="search" placeholder="Search Your Travel Destination" name="search">
+                <button type="submit">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#header_search"></use>
+                  </svg>  
+                  <p>Search</p>
+                </button>
+            </form>
+            <p>Scroll Down</p>
+            <a href="#why">
+                <svg>
+                    <use xlink:href="img/sprite.svg#chevron_down"></use>
+                </svg>
+            </a>
+          </div>
+        </section>
+        <header class="header">
+            <div class="head container">
+              <a href="/">Bhromaon</a>
+              <nav>
+                  <ul>
+                      <li><a href="#">Who We Are</a></li>
+                      <li><a href="#">What We Do</a></li>
+                      <li><a href="#">Travel With Us</a></li>
+                      <li><a href="#">Contact Us</a></li>
+                  </ul>
+              </nav>
+              <div class="burger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+            </div>
+        </header>
+        <section class="why" id="why">
+            <div class="container">
+                <div class="content">
+                    <h2>Why Choose Us</h2>
+                    <p>Tion and dislike men who are so beguiled and demoralized by desire by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee</p>
+                    <p>Ddislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that.</p>
+                    <button type="submit">Explore Places</button>
+                </div>
+                <div class="photo">
+                    <img src="img/why_img_1.png">
+                    <img src="img/why_img_2.png">
+                </div>
+            </div>
+        </section>
+        <section class="steps">
+            <div class="container">
+                <div class="lines">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#line"></use>
+                    </svg>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                        <h3>Search Places</h3>
+                    </div>
+                    <div class="item">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#check_circle"></use>
+                        </svg>
+                        <h3>Select Places</h3>
+                    </div>
+                    <div class="item">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#thumbs_up"></use>
+                        </svg>
+                        <h3>Book & Enjoy</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="book_now_first">
+            <div class="container">
+                <div class="spain">
+                    <h2>Spain</h2>
+                    <h3>Grand Spain Madrid</h3>
+                    <p>But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account born and I account will give you a complete account of the system</p>
+                    <button>book now</button>
+                </div>
+            </div>
+        </section>
+        <section class="book_now_second">
+            <div class="container">
+                <div class="spain">
+                    <h2>Spain</h2>
+                    <h3>Grand Spain Madrid</h3>
+                    <p>But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account born and I account will give you a complete account of the system</p>
+                    <button>book now</button>
+                </div>
+            </div>
+        </section>
+        <section class="tourist">
+            <div class="container">
+                <h2>What Our  Tourists Say</h2>
+                <div class="quote">
+                    <img src="img/tourist_photo.png">
+                    <div class="text">
+                        <h3>Sam Sumon</h3>
+                        <p>But I must explain to you how all this mistaken idea of account to denouncinpleasure and praising pain But I must explain to you how all this mistaken idea of account to nai denouncing pleasure and praising pain was account born and I account will give you a complete account of the system was account born and I account will give you a nai the complete account of the system</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <a href="/">Bhromaon</a>
+            <p>Safe Travel Anywhere</p>
+            <div class="social">
+                    <svg class="fb">
+                        <use xlink:href="img/sprite.svg#facebook"></use>
+                    </svg> 
+                    <svg class="tw">
+                        <use xlink:href="img/sprite.svg#twitter"></use>
+                    </svg> 
+                    <svg class="link">
+                        <use xlink:href="img/sprite.svg#linkedin"></use>
+                    </svg> 
+                    <svg class="ytb">
+                        <use xlink:href="img/sprite.svg#youtube"></use>
+                    </svg>
+                    <svg class="pinterest">
+                        <use xlink:href="img/sprite.svg#pinterest"></use>
+                    </svg>  
+            </div>
+        </footer>
+    </main>
+    <script>
+        let burger = document.querySelector('.burger');
+        let header = document.querySelector('.header');
+        burger.addEventListener('click', function () {
+          burger.classList.toggle('active');
+          header.classList.toggle('active');
+        });
+      </script>
+</body>
+</html>
