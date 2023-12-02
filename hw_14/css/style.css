@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/open_sans/open_sans-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto/roboto_black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("fonts/raleway/raleway_regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("fonts/raleway/raleway_medium.ttf") format("truetype");
+  font-weight: 500;
+}
+body .container section .right button, body .container section .right p, body .container section .right h4, body .container section .right h3, body .container .head h1, body .container .head h2 {
+  text-align: center;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+body .container {
+  max-width: 1170px;
+  width: 100%;
+}
+body .container .head {
+  max-width: 450px;
+  height: 157px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+body .container .head h2 {
+  color: #898F8F;
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+body .container .head h1 {
+  color: #FC0;
+  font-family: "Roboto";
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 66px;
+  text-transform: uppercase;
+}
+body .container .head .bottom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 40px;
+}
+body .container .head .bottom .line {
+  width: 210px;
+  height: 1px;
+  background-color: #FC0;
+}
+body .container .head .bottom svg {
+  width: 20px;
+  height: 20px;
+}
+body .container section {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container section .left {
+  max-width: 430px;
+  width: 100%;
+}
+body .container section .left .content {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+body .container section .left .content img {
+  width: 100%;
+  height: 100%;
+}
+body .container section .left .content .square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #FFCC00;
+  position: absolute;
+}
+body .container section .left .content .square:nth-of-type(1) {
+  top: -15px;
+  left: -15px;
+  border-right: unset;
+  border-bottom: unset;
+}
+body .container section .left .content .square:nth-of-type(2) {
+  bottom: -15px;
+  left: -15px;
+  border-right: unset;
+  border-top: unset;
+}
+body .container section .left .content .square:nth-of-type(3) {
+  top: -15px;
+  right: -15px;
+  border-left: unset;
+  border-bottom: unset;
+}
+body .container section .left .content .square:nth-of-type(4) {
+  bottom: -15px;
+  right: -15px;
+  border-left: unset;
+  border-top: unset;
+}
+body .container section .main_line {
+  width: 1px;
+  height: 560px;
+  background-color: #FC0;
+}
+body .container section .right {
+  max-width: 430px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container section .right h3 {
+  color: #666;
+  font-family: "Roboto";
+  font-size: 36px;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+body .container section .right .line {
+  width: 100px;
+  height: 1px;
+  background-color: #FC0;
+  margin-bottom: 30px;
+}
+body .container section .right h4 {
+  color: #666;
+  font-family: "Raleway";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+body .container section .right .icons {
+  margin-bottom: 49px;
+}
+body .container section .right .icons svg {
+  width: 30px;
+  height: 30px;
+}
+body .container section .right p {
+  color: #333;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+body .container section .right .lines {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+body .container section .right .lines .line {
+  width: 10px;
+  height: 4px;
+  background: #FC0;
+}
+body .container section .right .lines .short {
+  width: 20px;
+  height: 4px;
+  background: #FC0;
+}
+body .container section .right button {
+  width: 120px;
+  height: 24px;
+  border: 1px solid #FC0;
+  color: #666;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  text-transform: uppercase;
+}
