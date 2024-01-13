@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    form {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input {
+            padding: 10px;
+            width: 100%;
+            height: 40px;
+            border: 1px solid gray;
+        }
+        textarea {
+            border: 1px solid gray;
+            all: revert;
+        }
+        button {
+            border: 1px solid gray;
+            border-radius: 5px;
+            width: 90px;
+            height: 40px;
+            text-align: center;
+        }
+    }
+}
