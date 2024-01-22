@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+.stoplight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid gray;
+    }
+    button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+.red {
+    div {
+        &:first-of-type {
+            background-color: red;
+        }
+    }
+}
+.yellow {
+    div {
+        &:nth-of-type(2) {
+            background-color: yellow;
+        }
+    }
+}
+.green {
+    div {
+        &:last-of-type {
+            background-color: green;
+        }
+    }
+}
+.text_block {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid lightblue;
+    position: relative;
+    .resize_element {
+        width: 15px;
+        height: 15px;
+        background-color: lightblue;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
