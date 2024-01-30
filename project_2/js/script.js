@@ -44,8 +44,8 @@ const newsSlider = new Swiper('.news-slider', {
       clickable: true,
     },
     navigation: {
-      nextEl: '.news-slider-prev',
-      prevEl: '.news-slider-next',
+      nextEl: '.news-slider-next ',
+      prevEl: '.news-slider-prev',
     },
   });
 
@@ -61,6 +61,7 @@ const newsSlider = new Swiper('.news-slider', {
     lessLink: '<a class="more" href="#">Close</a>',
   });
 
+document.addEventListener('DOMContentLoaded', function(){
   function initMap() {
     const myLatLng = {lat: 40.6686, lng: -73.8999};
     const map = new google.maps.Map(document.getElementById("map"),{
@@ -77,7 +78,9 @@ const newsSlider = new Swiper('.news-slider', {
       },
     });
   }
-window.initMap = initMap; 
+  window.initMap = initMap;
+});
+
 
 let anchor = document.querySelectorAll(`a[href^="#"]`);
 anchor.forEach(link => {
