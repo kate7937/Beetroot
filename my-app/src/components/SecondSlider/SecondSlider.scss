@@ -1,0 +1,38 @@
+.movie_slider {
+    h2 {
+        color: #FFF;
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    .second_slider {
+        a {
+            img {
+                width: 227px;
+                height: 340px;
+                border-radius: 10px;
+                object-fit: cover;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+.swiper-container {
+    width: 1430px;
+  }
+@media screen and (min-width: 525px) {
+    .swiper-container {
+      width: 525px;
+    }
+  }
+  
+  @media screen and (min-width: 780px) {
+    .swiper-container {
+      width: 780px;
+    }
+  }

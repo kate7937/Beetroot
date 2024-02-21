@@ -1,0 +1,143 @@
+.single_movie {
+    padding: 40px 0;
+    margin: 0 auto;
+    max-width: 1285px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .images {
+        height: 550px;
+        width: 630px;
+        position: relative;
+        img {
+            width: 350px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            &.first_img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &.second_img {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    .info {
+        max-width: 440px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        h2 {
+            color: #8d8fec;
+            font-family: 'Open Sans';
+            font-size: 32px;
+            font-weight: 500;
+            background-color: #181a1d;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        p {
+            color: #FFF;
+            font-family: 'Open Sans';
+            font-size: 20px;
+            font-weight: 400;
+        }
+        h3 {
+            color: #FFF;
+            font-family: 'Open Sans';
+            font-size: 17px;
+            font-weight: 400;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+        .star {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 10px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            p {
+                font-size: 20px;
+                font-family: 'Open Sans';
+                color: #FFF;
+            }
+        }
+        a {
+            margin-left: auto;
+            button {
+                background-color: unset;
+                border: 1px solid #FFF;
+                border-radius: 10px;
+                width: 150px;
+                padding: 13px;
+                font-size: 14px;
+                color: #FFF;
+                font-family: 'Open Sans';
+                &:hover {
+                    color: #00afff;
+                    border-color: #00afff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1115px) {
+    .single_movie {
+        flex-direction: column;
+        align-items: center;
+        max-width: unset;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 660px) {
+    .single_movie {
+        .images {
+            height: 480px;
+            width: 440px;
+            img {
+                width: 280px;
+                height: 350px;
+            }
+        }
+        .info {
+            max-width: 400px;
+            h3 {
+                font-size: 13px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .single_movie {
+        .images {
+            height: 705px;
+            width: 280px;
+        }
+        .info {
+            max-width: 280px;
+            h3 {
+                font-size: 13px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
