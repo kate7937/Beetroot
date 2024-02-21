@@ -45,33 +45,31 @@ function SecondSlider() {
       <div className="movie_slider">
         <h2>New Releases</h2>
         <Swiper
-          breakpoints={{
-            525: {
-              width: 525,
-              slidesPerView: 2,
-            },
-            780: {
-              width: 780,
-              slidesPerView: 3,
-            },
-            // 1470: {
-            //   width: 1470,
-            //   slidesPerView: 6,
-            // },
-            // 1280: {
-            //   width: 1280,
-            //   slidesPerView: 5,
-            // },
-            // 1075: {
-            //   width: 1075,
-            //   slidesPerView: 4,
-            // },
-          }}
           modules={[Navigation]}
           className="second_slider"
           spaceBetween={12}
-          slidesPerView={1}
+          slidesPerView={6}
           navigation
+          breakpoints={{
+            50: {
+              slidesPerView: 1,
+            },
+            525: {
+              slidesPerView: 2,
+            },
+            780: {
+              slidesPerView: 3,
+            },
+            1075: {
+              slidesPerView: 4,
+            },
+            1280: {
+              slidesPerView: 5,
+            },
+            1470: {
+              slidesPerView: 6,
+            },
+          }}
         >
           {items}
         </Swiper>
