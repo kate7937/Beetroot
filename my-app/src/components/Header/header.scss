@@ -16,7 +16,7 @@
         justify-content: center;
         ul {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             li {
                 a {
                     text-decoration: unset;
@@ -60,10 +60,13 @@
     }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 770px) {
     .header {
         display: grid;
         grid-template-columns: 1fr 50px;
+        a {
+            width: 200px;
+        }
         nav {
             display: none;
         }

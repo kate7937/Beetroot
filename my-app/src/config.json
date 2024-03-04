@@ -1,0 +1,10 @@
+{
+    "api": {
+        "baseURL": "https://api.themoviedb.org",
+        "apiKey": "26bd9366e6d6a0e206f8ca36362dfd3b",
+        "allMovies": "/3/discover/movie",
+        "imgBaseURL": "https://image.tmdb.org/t/p/original",
+        "searchMovies": "/3/search/movie",
+        "singleMovie": "/3/movie/"
+    }
+}

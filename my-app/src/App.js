@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import Home from "./components/Home/Home";
-import Contacts from "./components/Contacts/Contacts";
-import Movies from "./components/Movies/Movies";
-import SingleMovie from "./components/SingleMovie/SingleMovie";
-import Ownlist from "./components/Ownlist/Ownlist";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
+import Home from "./components/page/Home/Home";
+import Contacts from "./components/page/Contacts/Contacts";
+import Movies from "./components/page/Movies/Movies";
+import SingleMovie from "./components/page/SingleMovie/SingleMovie";
+import Ownlist from "./components/page/Ownlist/Ownlist";
+import PageNotFound from "./components/page/PageNotFound/PageNotFound";
 import 'reset-css';
 import './style.scss';
 

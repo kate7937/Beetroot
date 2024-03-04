@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "./SecondSlider.scss";
+import "./secondSlider.scss";
 const baseURL = "https://api.themoviedb.org";
 const apiKey = "26bd9366e6d6a0e206f8ca36362dfd3b";
 const allMovies = "/3/discover/movie";
@@ -66,7 +66,7 @@ function SecondSlider() {
             1280: {
               slidesPerView: 5,
             },
-            1470: {
+            1430: {
               slidesPerView: 6,
             },
           }}
