@@ -1,0 +1,157 @@
+.main_container {
+    padding: 40px 0;
+    margin: 0 auto;
+    max-width: 1285px;
+    width: 100%;
+    form {
+        margin-bottom: 30px;
+        .form-items {
+            input {
+                background-color: unset;
+                border: unset;
+                border: 1px solid #FFF;
+                color: #FFF;
+                padding: 10px;
+                border-radius: 10px;
+                font-family: 'Open Sans';
+            }
+            button {
+                background-color: #FFF;
+                font-family: 'Open Sans';
+                font-weight: 700;
+                font-size: 14px;
+                border: unset;
+                padding: 10px;
+                border-radius: 15px;
+                margin-left: 15px;
+                &:active {
+                    background-color: #00afff;
+                }
+            }
+        }
+    }
+    .movies {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        .movie {
+            width: 300px;
+            height: 520px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #181a1d;
+            img {
+                width: 300px;
+                height: 380px;
+                object-fit: cover;
+                padding-bottom: 10px;
+            }
+            .title {
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h2 {
+                    color: #FFF;
+                    font-family: 'Open Sans';
+                    font-size: 20px;
+                    height: 40px;
+                    font-weight: 500;
+                }
+                .star {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    margin-left: auto;
+                    margin-right: 10px;
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    p {
+                        font-size: 20px;
+                        font-family: 'Open Sans';
+                        color: #FFF;
+                    }
+                }
+                .buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    .like {
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    .active {
+                        svg {
+                            g {
+                                fill: #b32d23;
+                            }
+                        }
+                    }
+                    a {
+                        button {
+                            background-color: unset;
+                            border: 1px solid #FFF;
+                            border-radius: 10px;
+                            width: 100px;
+                            padding: 8px;
+                            color: #FFF;
+                            font-family: 'Open Sans';
+                            &:hover {
+                                color: #00afff;
+                                border-color: #00afff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        nav {
+            ul {
+                li {
+                    button {
+                        color: #FFF;
+                    }
+                    .MuiPaginationItem-root {
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .main_container {
+        max-width: 930px;
+        .movies {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+}
+
+@media (max-width: 955px) {
+    .main_container {
+        max-width: 615px;
+        .movies {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .main_container {
+        max-width: 300px;
+        .movies {
+            grid-template-columns: 1fr;
+        }
+    }
+}

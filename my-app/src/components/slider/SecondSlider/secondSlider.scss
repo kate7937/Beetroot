@@ -1,0 +1,24 @@
+.movie_slider {
+    h2 {
+        color: #FFF;
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    .second_slider {
+        width: 100%;
+        a {
+            img {
+                width: 100%;
+                height: 340px;
+                border-radius: 10px;
+                object-fit: cover;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

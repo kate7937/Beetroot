@@ -1,0 +1,22 @@
+{
+    "mainMenu": {
+        "links": [
+          {
+            "link": "Home",
+            "path": "/"
+          },
+          {
+            "link": "Movies",
+            "path": "/movies"
+          },
+          {
+            "link": "Contacts",
+            "path": "/contacts"
+          },
+          {
+            "link": "Own List",
+            "path": "/ownlist"
+          }
+        ]
+      }
+}
